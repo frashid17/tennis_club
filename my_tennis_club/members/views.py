@@ -11,4 +11,12 @@ def members(request): #this is a view function that handles a request when someo
     return HttpResponse(template.render(context, request)) #this line takes the context renders it into the html template and sends result ans an HTTP response to the user's browser
 
 
+def details(request, id):
+    mymember = Member.objects.get(id=id)
+    template = loader.get_template('details.html')
+    context = {
+        'mymember':mymember,
+    }
+    return HttpResponse(template.render(context,request))
+
 
