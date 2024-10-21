@@ -4,5 +4,9 @@
         
        <h1> Hello {{firstname}}, how are you?</h1>
         <p>In Views.py you can see how I added the variable firstname</p>
+
+        {% with lastname="Mwangi" %}
+        <h1>Is your last name {{lastname}} </h1>
+        {% endwith %}
     </body>
 </html>
