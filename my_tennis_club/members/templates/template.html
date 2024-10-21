@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
     <body>
-        
-       <h1> Hello {{firstname}}, how are you?</h1>
-        <p>In Views.py you can see how I added the variable firstname</p>
+        <h1>Members</h1>
+       <ol>
+        {% for x in mymembers %}
+        <li>{{ x.firstname }} </li>
+        {% endfor %}
+       </ol>
+       
+       <p>used the existing model to display the data in the template </p>
 
-        {% with lastname="Mwangi" %}
-        <h1>Is your last name {{lastname}} </h1>
-        {% endwith %}
     </body>
 </html>
